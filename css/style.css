@@ -150,6 +150,14 @@ header {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.cards-background {
+  background-color: #99CEF2;
+  padding-top: 300px;   
+  padding-bottom: 197px; 
+  margin-top: -220px;    
+}
+
+
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 18px rgba(0,0,0,0.1);
