@@ -43,8 +43,8 @@ header {
   align-items: center;
 }
 
-.logo {
-  height: 38px;
+.logo img{
+  height: 65px;
   width: auto;
   margin-right: 16px;
 }
