@@ -23,7 +23,7 @@ main {
    NAVBAR
 ==================================== */
 header {
-  background-color: #0D2538;
+  background-color: #1B4F72;
   color: white;
   padding: 1rem 0;
 }
@@ -34,7 +34,7 @@ header {
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
-  background-color: #0D2538;
+  background-color: #1B4F72;
   padding: 1rem 0;
 }
 
@@ -89,11 +89,11 @@ header {
 }
 
 .navbar a:hover {
-  background-color: #174266;
+  background-color: #99CEF2;
 }
 
 .navbar a.active {
-  background-color: #1D5D8C;
+  background-color: #99CEF2;
 }
 
 /* ====================================
@@ -174,17 +174,31 @@ header {
    FOOTER
 ==================================== */
 footer {
-  background-color: #0D2538;
+  flex-shrink: 0;
+  background-color: #1B4F72;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
   position: relative;
-  bottom: 0;
   width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+
+.info-block p::first-letter {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #000000;
+}
+
+
+.info-block:nth-child(even) {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .contact-btn {
@@ -520,30 +534,4 @@ main {
   flex: 1 0 auto;
 }
 
-footer {
-  flex-shrink: 0;
-  background-color: #0D2538;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
 
-
-.info-block p::first-letter {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #000000;
-}
-
-
-.info-block:nth-child(even) {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 10px;
-}

@@ -1,5 +1,5 @@
 Student name: Jaimy Noordeloos 
 Student number: 706354
 Student class: HAINF25VT1B
-GitHub Repository: your github repository URL
+GitHub Repository: https://github.com/JaimyNoordeloos1/WebMarkupTentamen.git
 GitHub Pages URL: your github pages URL
