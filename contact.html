@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <meta charset="UTF-8" />
   <meta name="author" content="Jaimy Noordeloos">
-  <meta charset="UTF-8">
-  <meta name="description" content="Neem contact op met Gezond eten na 22:00 voor vragen of feedback.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neem contact op met Gezond eten na 22:00 – deel tips, suggesties of vragen over gezonde eetopties in Noord-Holland.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Gezond eten na 22:00</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
@@ -20,7 +20,6 @@
         </section>
         <h2 class="visually-hidden">Navigatie</h2>
       </section>
-
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="opties.html">Geen goede opties</a></li>
@@ -32,23 +31,63 @@
     </nav>
   </header>
 
-  <main>
-    <h1 class="center-title">Contact</h1>
+  <main id="main" class="contact-page">
+    <h1>Contact</h1>
 
     <section class="contact-container">
       <h2 class="visually-hidden">Contactformulier</h2>
-      <form action="#" method="post">
-        <label for="name">Naam:</label>
-        <input type="text" id="name" name="name" required>
+      <p class="form-info">Velden met “*” zijn verplichte velden</p>
 
-        <label for="email">E-mailadres:</label>
-        <input type="email" id="email" name="email" required>
+      <form class="contact-form" onsubmit="showMessage(); return false;">
+        <section class="row aanhef-row">
+          <h3 class="visually-hidden">Aanhef</h3>
+          <label for="aanhef">Aanhef*</label>
+          <section class="radio-group">
+            <label>mevr. <input type="radio" id="mevr" name="aanhef" value="mevr" required></label>
+            <label>dhr. <input type="radio" id="dhr" name="aanhef" value="dhr"></label>
+          </section>
+        </section>
 
-        <label for="message">Bericht:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <section class="row">
+          <h3 class="visually-hidden">Naam</h3>
+          <label for="name">Naam*</label>
+          <input type="text" id="name" name="name" required />
+        </section>
 
-        <button type="submit">Verstuur</button>
+        <section class="row">
+          <h3 class="visually-hidden">E-mailadres</h3>
+          <label for="email">E-mailadres*</label>
+          <input type="email" id="email" name="email" required />
+        </section>
+
+        <section class="row">
+          <h3 class="visually-hidden">Woonplaats</h3>
+          <label for="woonplaats">Woonplaats</label>
+          <input type="text" id="woonplaats" name="woonplaats" />
+        </section>
+
+        <section class="row">
+          <h3 class="visually-hidden">Telefoonnummer</h3>
+          <label for="telefoon">Telefoonnummer</label>
+          <input type="tel" id="telefoon" name="telefoon" />
+        </section>
+
+        <section class="row row-textarea">
+          <h3 class="visually-hidden">Vraag</h3>
+          <label for="message">Vraag*</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </section>
+
+        <button type="submit" class="submit-btn">Verzenden</button>
       </form>
+    </section>
+
+    <section id="thanks" class="overlay">
+      <h2 class="visually-hidden">Bedankt-melding</h2>
+      <section class="overlay-content">
+        <p>Bedankt voor het verzenden!</p>
+        <button onclick="closeMessage()">Sluiten</button>
+      </section>
     </section>
   </main>
 
@@ -62,5 +101,14 @@
     🍪 Deze website gebruikt cookies om de gebruikerservaring te verbeteren.
     <button onclick="this.parentElement.style.display='none'">OK</button>
   </section>
+
+  <script>
+    function showMessage() {
+      document.getElementById('thanks').style.display = 'flex';
+    }
+    function closeMessage() {
+      document.getElementById('thanks').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
