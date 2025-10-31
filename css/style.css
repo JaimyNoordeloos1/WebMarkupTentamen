@@ -19,6 +19,13 @@ main {
   flex: 1;
 }
 
+p {
+  letter-spacing: 0.1px;
+  text-indent: 5px;
+  word-spacing: 0.5px;
+}
+
+
 /* ====================================
    NAVBAR
 ==================================== */
@@ -82,10 +89,10 @@ header {
 .logo-link,
 .logo-link:hover,
 .logo-link:active {
-  background: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  transition: none !important;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  transition: none;
 }
 
 .navbar a:hover {
@@ -271,11 +278,12 @@ footer p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
   .navbar {
     flex-direction: column;
     gap: 12px;
   }
+
 
   .nav-menu {
     flex-wrap: wrap;
@@ -317,7 +325,14 @@ footer p {
   border-radius: 6px;
   text-align: left;
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+
+  border-color: #1B4F72; 
+  border-style: double;  
+  border-width: 4px;     
+
+
 }
+
 
 .form-info {
   text-align: center;
@@ -571,4 +586,18 @@ main {
 
 .cookie-banner button:hover {
   background: #174266;
+}
+
+/* =======================================
+   mobile only
+======================================= */
+
+.mobile-only {
+  display: none;
+}
+
+  @media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
 }
